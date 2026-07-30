@@ -1,0 +1,30 @@
+[package]
+name = "training-program"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "training-program"
+path = "src/main.rs"
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+uuid.workspace = true
+chrono.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+async-trait.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+axum.workspace = true
+sqlx.workspace = true
+hrms-kernel.workspace = true
+hrms-platform.workspace = true
+hrms-auth.workspace = true
+hrms-persistence.workspace = true
+hrms-messaging.workspace = true
+hrms-api-kit.workspace = true
+training-program-contracts = { path = "../contracts" }

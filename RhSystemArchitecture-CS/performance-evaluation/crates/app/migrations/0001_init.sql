@@ -1,0 +1,4 @@
+-- Performance Evaluation service schema.
+-- Placeholder migration so `sqlx::migrate!()` has a directory to read at build
+-- time. Replace with real DDL (campaigns, reviews, competency_scores,
+-- objectives) during detailed implementation.

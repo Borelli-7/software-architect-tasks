@@ -1,0 +1,2 @@
+-- Initial schema placeholder for the employee-administration service.
+-- Developers replace this with real DDL (employees, org units, documents).

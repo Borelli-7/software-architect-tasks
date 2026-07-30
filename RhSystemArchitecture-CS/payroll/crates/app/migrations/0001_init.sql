@@ -1,0 +1,4 @@
+-- Payroll service schema.
+-- Placeholder migration so `sqlx::migrate!()` has a directory to read at build
+-- time. Replace with real DDL (payroll_runs, payslips, pay_components,
+-- approvals) during detailed implementation.

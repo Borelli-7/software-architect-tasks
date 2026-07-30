@@ -1,0 +1,4 @@
+-- Career Path Planning service schema.
+-- Placeholder migration so `sqlx::migrate!()` has a directory to read at build
+-- time. Replace with real DDL (career_paths, career_steps,
+-- required_competencies, gap_analyses) during detailed implementation.

@@ -1,0 +1,4 @@
+-- Training Program service schema.
+-- Placeholder migration so `sqlx::migrate!()` has a directory to read at build
+-- time. Replace with real DDL (programs, enrollments, certifications) during
+-- detailed implementation.
