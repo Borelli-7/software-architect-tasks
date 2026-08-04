@@ -1,0 +1,15 @@
+# Dioxus bundle configuration for the Android app.
+# Build/run: `dx serve --platform android` (emulator/device) or
+#            `dx bundle --platform android` -> .apk / .aab
+#
+# NOTE: Android builds require the Android SDK + NDK and a JDK, plus the
+# aarch64-linux-android (and friends) Rust targets.
+[application]
+name = "Bank HRMS"
+identifier = "com.bank.hrms"
+default_platform = "mobile"
+
+[bundle]
+identifier = "com.bank.hrms"
+publisher = "Bank HRMS"
+icon = ["assets/icons/icon.png"]

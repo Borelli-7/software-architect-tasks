@@ -1,0 +1,14 @@
+# Dioxus bundle configuration for the iOS app.
+# Build/run: `dx serve --platform ios` (simulator) or
+#            `dx bundle --platform ios` -> .app / .ipa
+#
+# NOTE: iOS builds require macOS with Xcode + the aarch64-apple-ios targets.
+[application]
+name = "Bank HRMS"
+identifier = "com.bank.hrms"
+default_platform = "mobile"
+
+[bundle]
+identifier = "com.bank.hrms"
+publisher = "Bank HRMS"
+icon = ["assets/icons/icon.png"]

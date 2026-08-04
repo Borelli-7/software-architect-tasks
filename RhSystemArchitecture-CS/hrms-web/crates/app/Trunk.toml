@@ -1,0 +1,7 @@
+# Trunk build configuration for the Leptos CSR SPA.
+# Run `trunk serve` for local dev, `trunk build --release` for production assets.
+[build]
+target = "index.html"
+
+[serve]
+port = 8080
