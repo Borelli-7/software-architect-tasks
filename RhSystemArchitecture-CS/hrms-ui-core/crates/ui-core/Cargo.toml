@@ -1,0 +1,23 @@
+[package]
+name = "hrms-ui-core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+# `router` is not a default dioxus feature; enable it for Router/Link/Outlet/Routable.
+dioxus = { workspace = true, features = ["router"] }
+serde.workspace = true
+uuid.workspace = true
+hrms-api-client.workspace = true
+hrms-design-tokens.workspace = true
+hrms-auth-client.workspace = true
+
+# Platform is chosen by the launcher via one of these features. `desktop` is the
+# default so `cargo check`/`clippy` on the host validates the shared UI directly.
+[features]
+default = ["desktop"]
+web = ["dioxus/web"]
+desktop = ["dioxus/desktop"]
+mobile = ["dioxus/mobile"]

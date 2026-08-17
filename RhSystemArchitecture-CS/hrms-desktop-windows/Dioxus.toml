@@ -1,0 +1,11 @@
+# Dioxus bundle configuration for the Windows desktop app.
+# Build: `dx bundle --platform windows --package-types msi` (or `nsis`).
+[application]
+name = "Bank HRMS"
+identifier = "com.bank.hrms"
+default_platform = "desktop"
+
+[bundle]
+identifier = "com.bank.hrms"
+publisher = "Bank HRMS"
+icon = ["assets/icons/icon.ico"]

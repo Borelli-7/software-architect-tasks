@@ -1,0 +1,15 @@
+[package]
+name = "hrms-desktop-windows"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "Proprietary"
+
+[[bin]]
+name = "hrms-desktop-windows"
+path = "src/main.rs"
+
+[dependencies]
+dioxus = { version = "0.7", features = ["desktop"] }
+# Shared Dioxus UI. Path dep for now; switch to a pinned git tag once split out.
+hrms-ui-core = { path = "../hrms-ui-core/crates/ui-core", default-features = false, features = ["desktop"] }

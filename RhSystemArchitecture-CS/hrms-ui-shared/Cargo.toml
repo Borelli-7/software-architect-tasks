@@ -1,0 +1,23 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/hrms-api-client",
+    "crates/hrms-design-tokens",
+    "crates/hrms-auth-client",
+]
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+rust-version = "1.85"
+license = "Proprietary"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+uuid = { version = "1", features = ["v4", "serde", "js"] }
+chrono = { version = "0.4", features = ["serde"] }
+thiserror = "2"
+# default-features disabled so the same client compiles for wasm (browser fetch)
+# and native (rustls added via target cfg in the crate manifest).
+reqwest = { version = "0.12", default-features = false, features = ["json"] }

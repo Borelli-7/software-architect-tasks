@@ -1,0 +1,20 @@
+# Dioxus bundle configuration for the Linux desktop app.
+# Build a .deb: `dx bundle --platform linux --package-types deb`
+# (AppImage/rpm also available via --package-types appimage|rpm).
+#
+# NOTE: building requires the WebKitGTK/GTK system libraries, e.g. on Debian:
+#   sudo apt install libwebkit2gtk-4.1-dev libgtk-3-dev libglib2.0-dev
+[application]
+name = "Bank HRMS"
+identifier = "com.bank.hrms"
+default_platform = "desktop"
+
+[bundle]
+identifier = "com.bank.hrms"
+publisher = "Bank HRMS"
+icon = ["assets/icons/icon.png"]
+
+[bundle.deb]
+depends = ["libwebkit2gtk-4.1-0", "libgtk-3-0"]
+section = "utils"
+priority = "optional"

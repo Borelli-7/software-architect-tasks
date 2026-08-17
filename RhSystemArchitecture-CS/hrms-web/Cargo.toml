@@ -1,0 +1,24 @@
+[workspace]
+resolver = "2"
+members = ["crates/app"]
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+rust-version = "1.85"
+license = "Proprietary"
+
+[workspace.dependencies]
+leptos = { version = "0.8", features = ["csr"] }
+leptos_router = "0.8"
+leptos_meta = "0.8"
+console_error_panic_hook = "0.1"
+wasm-bindgen = "0.2"
+serde = { version = "1", features = ["derive"] }
+uuid = { version = "1", features = ["v4", "serde", "js"] }
+
+# Shared framework-agnostic crates. Path deps for now; switch to pinned git tags
+# once each frontend repo is split out (mirrors the backend repo-per-unit setup).
+hrms-api-client = { path = "../hrms-ui-shared/crates/hrms-api-client" }
+hrms-design-tokens = { path = "../hrms-ui-shared/crates/hrms-design-tokens" }
+hrms-auth-client = { path = "../hrms-ui-shared/crates/hrms-auth-client" }

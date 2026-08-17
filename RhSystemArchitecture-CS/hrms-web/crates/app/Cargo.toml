@@ -1,0 +1,22 @@
+[package]
+name = "hrms-web"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "hrms-web"
+path = "src/main.rs"
+
+[dependencies]
+leptos.workspace = true
+leptos_router.workspace = true
+leptos_meta.workspace = true
+console_error_panic_hook.workspace = true
+wasm-bindgen.workspace = true
+serde.workspace = true
+uuid.workspace = true
+hrms-api-client.workspace = true
+hrms-design-tokens.workspace = true
+hrms-auth-client.workspace = true

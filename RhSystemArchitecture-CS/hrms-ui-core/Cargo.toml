@@ -1,0 +1,22 @@
+[workspace]
+resolver = "2"
+members = ["crates/ui-core"]
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+rust-version = "1.85"
+license = "Proprietary"
+
+[workspace.dependencies]
+# Keep default features (macro, hooks, signals, html, launch); the renderer is
+# added per platform via the ui-core `web`/`desktop`/`mobile` features.
+dioxus = { version = "0.7" }
+serde = { version = "1", features = ["derive"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+
+# Shared framework-agnostic crates. Path deps for now; switch to pinned git tags
+# once each frontend repo is split out (mirrors the backend repo-per-unit setup).
+hrms-api-client = { path = "../hrms-ui-shared/crates/hrms-api-client" }
+hrms-design-tokens = { path = "../hrms-ui-shared/crates/hrms-design-tokens" }
+hrms-auth-client = { path = "../hrms-ui-shared/crates/hrms-auth-client" }

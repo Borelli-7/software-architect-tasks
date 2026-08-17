@@ -1,0 +1,17 @@
+[package]
+name = "hrms-mobile-android"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "Proprietary"
+
+# Android builds the app as a cdylib loaded by the generated Gradle project.
+[lib]
+name = "hrms_mobile_android"
+crate-type = ["cdylib", "rlib"]
+path = "src/lib.rs"
+
+[dependencies]
+dioxus = { version = "0.7", features = ["mobile"] }
+# Shared Dioxus UI. Path dep for now; switch to a pinned git tag once split out.
+hrms-ui-core = { path = "../hrms-ui-core/crates/ui-core", default-features = false, features = ["mobile"] }
